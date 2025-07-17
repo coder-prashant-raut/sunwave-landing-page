@@ -9,6 +9,13 @@ import Footer from '../components/Footer.jsx'
 import { Inter } from 'next/font/google'
 
 
+import { Rubik } from 'next/font/google'
+
+const rubik = Rubik({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  display: 'swap',
+})
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -43,8 +50,20 @@ export const metadata = {
 
 
 export default function RootLayout({ children }) {
+  
   return (
+
+
     <html lang="en">
+
+      <head>
+        {/* Google Fonts Link */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+
       <body className={inter.className}>
         <Header />
         <main className="top-0">{children}</main>

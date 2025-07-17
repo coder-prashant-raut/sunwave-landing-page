@@ -6,7 +6,8 @@ import ContactPage from "../components/ContactForm.jsx";
 import ServicesSection from "../components/ServicesSection.jsx";
 import ProjectShowcaseSection from "../components/ProjectShowcaseSection.jsx";
 import TestimonialMasterpiece from "../components/TestimonialMasterpiece.jsx";
-
+import AboutUs from "../components/AboutUs.jsx"
+import WorkProcessSection from "../components/WorkProcessSection.jsx";
 export default function Home() {
   return (
     <>
@@ -60,7 +61,11 @@ export default function Home() {
       {/* Hero Section */}
       <main>
         <HeroSection />
+        <AboutUs/>
+
         <ServicesSection/>
+
+        <WorkProcessSection/>
         <ProjectShowcaseSection/> 
         <TestimonialMasterpiece/>
         <ContactPage/>

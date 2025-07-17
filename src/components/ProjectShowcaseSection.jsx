@@ -62,7 +62,7 @@ export default function ProjectShowcaseSection() {
   }, []);
 
   return (
-    <section className="bg-white dark:bg-[#0f0f0f] py-20 px-4 md:px-10">
+    <section className="bg-white dark:bg-[#0f0f0f] py-20 px-4 md:px-10 pt-[180px]">
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800 dark:text-white">
           Our Successful Solar Installations
