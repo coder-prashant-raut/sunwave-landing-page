@@ -11,7 +11,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-[#082f09] text-white pt-10 font-[Rubik]">
+    <footer className="bg-[#082f09] px-5 pb-12 text-white pt-10 font-[Rubik]">
       
       {/* Top Contact Info */}
       <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between gap-6 pb-10 border-b border-green-800">
@@ -100,7 +100,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright Bar */}
-      <div className="bg-lime-400 text-[#082f09] text-center text-sm font-semibold py-4 rounded-t-2xl">
+      <div className="bg-lime-400 text-[#082f09] text-center md:mx-30 md:py-8 md:text-2xl text-sm font-semibold py-4 rounded-2xl">
         Copyright © 2024 Solor. All rights reserved.
       </div>
     </footer>

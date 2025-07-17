@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 
-const CityMarquee = () => {
+const CityScroller = () => {
   const cities = [
     'Mumbai',
     'Pune',
@@ -71,4 +71,4 @@ const CityMarquee = () => {
   )
 }
 
-export default CityMarquee
+export default CityScroller

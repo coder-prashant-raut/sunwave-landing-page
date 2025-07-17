@@ -1,82 +1,158 @@
-'use client'
+'use client';
 
 import { useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
-import { FaFacebookF, FaXTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa6';
+import {
+  FaFacebookF,
+  FaXTwitter,
+  FaLinkedinIn,
+  FaInstagram,
+} from 'react-icons/fa6';
 import { MdEmail, MdPhone } from 'react-icons/md';
 import Link from 'next/link';
 
 export default function Header() {
   const [navOpen, setNavOpen] = useState(false);
 
+  const navLinks = [
+    { name: 'Home', href: '/' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Projects', href: '/projects' },
+    { name: 'Blog', href: '/blog' },
+  ];
+
   return (
     <header className="w-full z-50 absolute top-0 left-0">
       {/* Top Info Bar */}
-      <div className="bg-transparent text-white text-sm py-4 px-34 flex justify-between items-center">
-        <div className="flex items-center gap-6">
-          <div className="flex items-center gap-2 mb-2">
-            <MdEmail className="text-xl font-bold text-[#89EA5F]" /> info@domain.com
+      <div className="bg-transparent text-white text-sm px-4 md:px-36 py-4 flex flex-col md:flex-row justify-between items-center gap-2">
+        <div className="flex flex-row flex-wrap gap-3 text-center sm:text-left">
+          <div className="flex items-center gap-2">
+            <MdEmail className="text-xl text-[#89EA5F]" />
+            <span>info@domain.com</span>
           </div>
-          <div className="flex items-center gapn ">
-            <MdPhone className="text-xl font-bold text-[#89EA5F]" /> +01 248 248 2481
+          <div className="flex items-center gap-2">
+            <MdPhone className="text-xl text-[#89EA5F]" />
+            <span>+01 248 248 2481</span>
           </div>
         </div>
-        <div className="flex gap-2 text-lg">
-          <a href="#" className="bg-[#89EA5F] hover:bg-green-400 text-black font-semi-bold p-2 rounded-md"><FaFacebookF /></a>
-          <a href="#" className="bg-[#89EA5F] hover:bg-green-400 text-black font-semi-bold p-2 rounded-md"><FaXTwitter /></a>
-          <a href="#" className="bg-[#89EA5F] hover:bg-green-400 text-black font-semi-bold p-2 rounded-md"><FaLinkedinIn /></a>
-          <a href="#" className="bg-[#89EA5F] hover:bg-green-400 text-black font-semi-bold p-2 rounded-md"><FaInstagram /></a>
+
+        <div className="flex gap-3 justify-center mt-2 sm:mt-0">
+          {[FaFacebookF, FaXTwitter, FaLinkedinIn, FaInstagram].map(
+            (Icon, idx) => (
+              <a
+                key={idx}
+                href="#"
+                className="bg-[#89EA5F] hover:bg-green-400 text-black p-2 rounded-md transition"
+              >
+                <Icon />
+              </a>
+            )
+          )}
         </div>
       </div>
 
-      {/* Main Nav - Now visually grouped, not fixed */}
-      <div className="relative ">
-        <div className="bg-[#FFFFFF] text-2xl text-black shadow-md rounded-4xl px-6 py-6 max-w-7xl mx-auto w-[95%] flex justify-between items-center">
-          <Link href="/" className="text-4xl font-bold text-[#89EA5F]  flex items-center gap-1">
-             Solar
+      {/* Main Nav */}
+      <div className="relative">
+        <div className="bg-white text-black shadow-md rounded-3xl px-6 py-4 max-w-7xl mx-auto w-[95%] flex justify-between items-center">
+          <Link href="/" className="text-4xl font-bold text-[#89EA5F]">
+            Solar
           </Link>
+
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8 text-[15px] font-medium">
-            <Link href="/" className="text-black  hover:text-green-500 transition">Home</Link>
-            <Link href="/about" className="text-black  hover:text-green-500 transition">About Us</Link>
-            <Link href="/services" className="text-black  hover:text-green-500 transition">Services</Link>
-            <Link href="/projects" className="text-black  hover:text-green-500 transition">Projects</Link>
-            <Link href="/blog" className="text-black  hover:text-green-500 transition">Blog</Link>
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="hover:text-green-500 transition"
+              >
+                {link.name}
+              </Link>
+            ))}
           </nav>
+
+          {/* Desktop Button */}
           <div className="hidden md:block">
             <Link
               href="/contact"
-              className="bg-[#89EA5F] hover:bg-green-400 text-black/80 text-xl font-semibold py-2 px-4 rounded-full transition"
+              className="bg-[#89EA5F] hover:bg-green-400 text-black/80 text-lg font-semibold py-2 px-4 rounded-full transition"
             >
               Contact us
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button onClick={() => setNavOpen(!navOpen)}>
-              {navOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+          {/* Hamburger Toggle */}
+          <div className="md:hidden z-50">
+            <button onClick={() => setNavOpen(!navOpen)} aria-label="Toggle Menu">
+              {navOpen ? (
+                <FiX size={28} className="text-[#89EA5F] transition-transform rotate-90" />
+              ) : (
+                <FiMenu size={28} className="text-[#89EA5F]" />
+              )}
             </button>
           </div>
         </div>
       </div>
 
       {/* Mobile Menu */}
-      {navOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-900 shadow-lg px-6 py-6 space-y-4 z-30 rounded-b-xl">
-          <Link href="/">Home</Link>
-          <Link href="/about">About Us</Link>
-          <Link href="/services">Services</Link>
-          <Link href="/projects">Projects</Link>
-          <Link href="#">Pages</Link>
-          <Link href="/blog">Blog</Link>
-          <Link
-            href="/contact"
-            className="inline-block w-full bg-green-300 hover:bg-green-400 text-black font-semibold py-2 text-center rounded-full transition"
-          >
-            Contact us
-          </Link>
+      <div
+        className={`md:hidden fixed top-0 left-0 h-full w-full bg-white z-40 transition-transform duration-500 ease-in-out ${
+          navOpen ? 'translate-x-0 z-99' : 'translate-x-full'
+        }`}
+      >
+        <div className="flex flex-col h-full justify-between py-10 px-6">
+          {/* Logo & Close */}
+          <div className="flex justify-between items-center mb-8">
+            <Link
+              href="/"
+              className="text-3xl font-bold text-[#89EA5F]"
+              onClick={() => setNavOpen(false)}
+            >
+              Solar
+            </Link>
+            <button onClick={() => setNavOpen(false)} aria-label="Close Menu">
+              <FiX size={28} className="text-[#89EA5F]" />
+            </button>
+          </div>
+
+          {/* Navigation Links */}
+          <nav className="flex flex-col gap-6 text-xl font-medium text-center">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setNavOpen(false)}
+                className="text-[#89EA5F] hover:text-green-500 transition"
+              >
+                {link.name}
+              </Link>
+            ))}
+            <Link
+              href="/contact"
+              onClick={() => setNavOpen(false)}
+              className="bg-[#89EA5F] hover:bg-green-400 text-black font-semibold py-2 mt-6 rounded-full transition"
+            >
+              Contact us
+            </Link>
+          </nav>
+
+          {/* Social Icons */}
+          <div className="flex gap-3 justify-center mt-10">
+            {[FaFacebookF, FaXTwitter, FaLinkedinIn, FaInstagram].map(
+              (Icon, idx) => (
+                <a
+                  key={idx}
+                  href="#"
+                  className="bg-[#89EA5F] hover:bg-green-400 text-black p-2 rounded-md transition"
+                >
+                  <Icon />
+                </a>
+              )
+            )}
+          </div>
         </div>
-      )}
+      </div>
     </header>
   );
 }
