@@ -6,7 +6,7 @@ import ContactPage from "../components/ContactForm.jsx";
 import ServicesSection from "../components/ServicesSection.jsx";
 import ProjectShowcaseSection from "../components/ProjectShowcaseSection.jsx";
 import TestimonialMasterpiece from "../components/TestimonialMasterpiece.jsx";
-import AboutUs from "../components/AboutUs.jsx"
+import AboutUs from "../components/AboutUs.jsx";
 import WorkProcessSection from "../components/WorkProcessSection.jsx";
 import CallToAction from "../components/CallToAction.jsx";
 import CityScroller from "../components/CityScroller.jsx";
@@ -35,7 +35,7 @@ export default function Home() {
               addressCountry: "IN",
             },
             openingHours: "Mo-Sa 09:00-18:00",
-            priceRange: "$$"
+            priceRange: "$$",
           }),
         }}
       />
@@ -63,17 +63,16 @@ export default function Home() {
       {/* Hero Section */}
       <main>
         <HeroSection />
-        <AboutUs/>
-<CityScroller/>
-        <ServicesSection/>
+        <AboutUs />
+        <CityScroller />
+        <ServicesSection />
 
-        <WorkProcessSection/>
+        <WorkProcessSection />
 
-        <CallToAction/>
-        <ProjectShowcaseSection/> 
-        <TestimonialMasterpiece/>
-        <ContactPage/>
-
+        <ProjectShowcaseSection />
+        <CallToAction />
+        <TestimonialMasterpiece />
+        <ContactPage />
       </main>
     </>
   );

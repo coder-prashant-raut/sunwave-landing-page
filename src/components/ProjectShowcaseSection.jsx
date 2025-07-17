@@ -62,14 +62,20 @@ export default function ProjectShowcaseSection() {
   }, []);
 
   return (
-    <section className="bg-white dark:bg-[#0f0f0f] py-20 px-4 md:px-10 pt-[180px]">
+    <section className="bg-white  py-20 px-4 md:px-10 pt-[180px]">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-800 dark:text-white">
-          Our Successful Solar Installations
-        </h2>
-        <p className="text-gray-600 dark:text-gray-300 text-lg max-w-2xl mx-auto mb-12">
-          Trusted by industries and households across India. Each project showcases our commitment to quality, innovation, and energy independence.
-        </p>
+        <div class="w-full px-4 py-12 sm:py-16 bg-white text-center font-[Rubik]">
+  <div class="max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black/50 mb-4 leading-tight">
+      Our Successful <span class="text-[#89EA5F]">Solar Installations</span>
+    </h2>
+    <p class="text-base sm:text-lg text-black/40 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto">
+      Trusted by industries and households across India.
+      <br class="hidden sm:block" />
+      Each project showcases our commitment to <span class="text-[#89EA5F] font-semibold">quality, innovation</span>, and <span class="text-[#89EA5F] font-semibold">energy independence</span>.
+    </p>
+  </div>
+</div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {visibleIndexes.map((index, i) => {
@@ -82,22 +88,22 @@ export default function ProjectShowcaseSection() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -30 }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
-                className="relative bg-white dark:bg-gray-900 rounded-3xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-2xl transition duration-500 group"
+                className="relative bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700 hover:shadow-2xl transition duration-500 group"
               >
                 <img
                   src={project.image}
                   alt={`${project.type} project by ${project.client}`}
                   className="w-full h-52 object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute top-3 left-3 bg-yellow-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow">
-                  Verified
+                <div className="absolute top-3 left-3 bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow flex items-center justify-center gap-1">
+                  <BadgeCheck className="w-4 h-4" /> Verified
                 </div>
                 <div className="p-5 text-left">
-                  <div className="flex items-center gap-2 text-yellow-600 dark:text-yellow-400 text-sm font-medium mb-1">
+                  <div className="flex items-center gap-2 text-green-600 text-sm font-medium mb-1">
                     <BadgeCheck className="w-4 h-4" />
                     {project.type} Project
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-800 dark:text-white leading-snug">
+                  <h3 className="text-xl font-semibold text-gray-800 leading-snug">
                     {project.client}
                   </h3>
                   <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
