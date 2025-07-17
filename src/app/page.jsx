@@ -9,6 +9,7 @@ import TestimonialMasterpiece from "../components/TestimonialMasterpiece.jsx";
 import AboutUs from "../components/AboutUs.jsx"
 import WorkProcessSection from "../components/WorkProcessSection.jsx";
 import CallToAction from "../components/CallToAction.jsx";
+import CityScroller from "../components/CityScroller.jsx";
 export default function Home() {
   return (
     <>
@@ -63,7 +64,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <AboutUs/>
-
+<CityScroller/>
         <ServicesSection/>
 
         <WorkProcessSection/>
