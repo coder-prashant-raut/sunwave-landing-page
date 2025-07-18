@@ -50,7 +50,7 @@ export default function ContactPage() {
     const msg = `New Inquiry from Clean Solar Website:\n\n👤 Name: ${name}\n📧 Email: ${email}\n📞 Phone: ${phone}\n⏰ Preferred Time: ${timeSlot}\n💬 Message: ${message}`;
 
     setTimeout(() => {
-      window.open(`https://wa.me/919876543210?text=${encodeURIComponent(msg)}`, "_blank");
+      window.open(`https://wa.me/919067751221?text=${encodeURIComponent(msg)}`, "_blank");
       toast.dismiss();
       toast.success("✅ Message sent via WhatsApp!", toastStyles);
       setForm({ name: "", email: "", phone: "", message: "", timeSlot: "" });

@@ -35,11 +35,11 @@ export default function Header() {
          <div className="flex flex-row flex-wrap gap-3 text-center sm:text-left">
       <div className="flex items-center gap-2">
         <MdEmail className="text-xl text-[#89EA5F]" />
-        <span className={isHome ? 'text-white' : 'text-black'}>info@domain.com</span>
+        <span className={isHome ? 'text-white' : 'text-black'}>prashantraut1308@gmail.com</span>
       </div>
       <div className="flex items-center gap-2">
         <MdPhone className="text-xl text-[#89EA5F]" />
-        <span className={isHome ? 'text-white' : 'text-black'}>+01 248 248 2481</span>
+        <span className={isHome ? 'text-white' : 'text-black'}>+91 9067751221</span>
       </div>
     </div>
 
