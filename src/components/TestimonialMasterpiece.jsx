@@ -48,61 +48,77 @@ export default function TestimonialMasterpiece() {
   const current = testimonials[currentIndex];
 
   return (
-    <section className="relative w-full bg-gradient-to-b from-yellow-50 to-white dark:from-[#1f1f1f] dark:to-black py-28 px-4 md:px-8 overflow-hidden">
-      <div className="absolute -top-20 -left-20 w-[300px] h-[300px] bg-yellow-300 dark:bg-yellow-500 rounded-full blur-[120px] opacity-30 z-0 animate-pulse"></div>
-      <div className="max-w-6xl mx-auto text-center relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
+    <section className="relative w-full bg-[#f9fdf7] py-20 px-4 sm:px-6 lg:px-8 font-[Rubik] overflow-hidden">
+      {/* Background Glow Elements */}
+      <div className="absolute -top-32 -left-32 w-[300px] h-[300px] bg-[#89EA5F] opacity-10 rounded-full blur-[120px] z-0" />
+      <div className="absolute -bottom-32 -right-32 w-[300px] h-[300px] bg-yellow-400 opacity-10 rounded-full blur-[120px] z-0" />
+
+      <div className="relative z-10 max-w-5xl mx-auto text-center">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900/55 mb-4 leading-tight">
           What Our Clients Say
         </h2>
-        <p className="text-lg text-gray-600 dark:text-gray-300 mb-14 max-w-2xl mx-auto">
-          Real stories. Real savings. Hear how Clean Solar is changing lives and lowering electricity bills across India.
+        <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto mb-12">
+          Real stories. Real savings. Discover how Clean Solar transforms lives across India — one rooftop at a time.
         </p>
 
-        <div className="relative">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentIndex}
-              initial={{ opacity: 0, y: 80, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -80, scale: 0.95 }}
-              transition={{ duration: 0.9, ease: "easeInOut" }}
-              className="bg-white dark:bg-gray-900 rounded-3xl shadow-2xl max-w-3xl mx-auto px-10 py-14 relative overflow-hidden border border-gray-100 dark:border-gray-700"
-            >
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 0.08, y: 0 }}
-                transition={{ delay: 0.5, duration: 1 }}
-                className="absolute -top-10 -left-10 w-40 h-40 bg-yellow-500 dark:bg-yellow-400 rounded-full blur-3xl"
-              />
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentIndex}
+            initial={{ opacity: 0, y: 50, scale: 0.98 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -50, scale: 0.98 }}
+            transition={{ duration: 0.6, ease: "easeInOut" }}
+            className="bg-white rounded-xl sm:rounded-3xl shadow-[0_12px_50px_-12px_rgba(0,0,0,0.2)] max-w-lg mx-auto px-6 py-10 sm:px-10 sm:py-12 border border-[#ebfbe2] dark:border-[#1f1f1f] backdrop-blur-md"
+          >
+            <Quote className="w-8 h-8 text-[#89EA5F] mx-auto mb-6" />
 
-              <Quote className="w-10 h-10 text-yellow-500 mx-auto mb-6" />
-              <motion.img
+            <motion.div
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ delay: 0.2, duration: 0.4, ease: "backOut" }}
+              className="relative w-20 h-20 mx-auto mb-5"
+            >
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#89EA5F] to-yellow-300 opacity-40 blur-lg z-0" />
+              <img
                 src={current.image}
                 alt={current.name}
-                className="w-24 h-24 rounded-full border-4 border-yellow-400 mx-auto mb-6 shadow-xl object-cover"
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 0.2, duration: 0.5, ease: "backOut" }}
+                className="relative z-10 w-20 h-20  border-white object-cover shadow-lg"
               />
-
-              <div className="flex justify-center gap-1 mb-4">
-                {Array(5)
-                  .fill()
-                  .map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
-                  ))}
-              </div>
-
-              <blockquote className="text-xl italic text-gray-700 dark:text-gray-100 leading-relaxed mb-8">
-                “{current.message}”
-              </blockquote>
-
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                {current.name}
-              </h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400">{current.role}</p>
             </motion.div>
-          </AnimatePresence>
+
+            <div className="flex justify-center gap-1 mb-4">
+              {Array(5)
+                .fill(0)
+                .map((_, i) => (
+                  <Star key={i} className="w-4 h-4 text-green-500 fill-green-500" />
+                ))}
+            </div>
+
+            <blockquote className="text-base sm:text-lg italic text-gray-300 leading-relaxed mb-6">
+              “{current.message}”
+            </blockquote>
+
+            <h3 className="text-lg font-semibold text-gray-900 ">
+              {current.name}
+            </h3>
+            <p className="text-sm text-[#89EA5F]">
+              {current.role}
+            </p>
+          </motion.div>
+        </AnimatePresence>
+
+        <div className="mt-6 flex justify-center gap-3">
+          {testimonials.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrentIndex(i)}
+              className={`w-3 h-3 rounded-full transition-all ${
+                currentIndex === i
+                  ? "bg-[#89EA5F] scale-110 shadow"
+                  : "bg-gray-300 dark:bg-gray-600"
+              }`}
+            />
+          ))}
         </div>
       </div>
     </section>

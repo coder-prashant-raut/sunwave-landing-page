@@ -66,7 +66,7 @@ export default function ProjectShowcaseSection() {
       <div className="max-w-7xl mx-auto text-center">
         <div class="w-full px-4 py-12 sm:py-16 bg-white text-center font-[Rubik]">
   <div class="max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
-    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-black/50 mb-4 leading-tight">
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-black/50 mb-4 leading-tight">
       Our Successful <span class="text-[#89EA5F]">Solar Installations</span>
     </h2>
     <p class="text-base sm:text-lg text-black/40 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto">

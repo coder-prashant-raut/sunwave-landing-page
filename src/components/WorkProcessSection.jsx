@@ -27,8 +27,8 @@ const steps = [
 
 export default function WorkProcessSection() {
   return (
-    <section className="py-20 px-4 md:px-10 bg-black/5 font-sans">
-      <div className="max-w-7xl mx-auto text-center">
+    <section className="py-20 px-4 md:px-10 bg-white font-sans">
+      <div className="max-w-7xl mx-auto text-center shadow-lg px-2 py-5 bg-[#f3f5f2]">
         <motion.p
           className="text-[#89EA5F] uppercase tracking-wider font-semibold mb-2"
           initial={{ opacity: 0, y: 10 }}

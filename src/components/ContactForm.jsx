@@ -98,9 +98,9 @@ export default function ContactPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="bg-white rounded-3xl border border-gray-200 p-8 shadow-xl">
+          <div className="bg-white rounded-3xl border border-gray-200 p-8 font-[Rubik] shadow-xl">
             <h1 className="text-4xl font-bold text-center mb-4 text-gray-800">
-              🚀 Reach <span className="text-[#89EA5F]">Clean Solar</span>
+              🚀 Reach <span className="text-[#89EA5F]">SunWave</span>
             </h1>
             <p className="text-center text-gray-500 mb-10">
               Let us light up your world. Fill in your details and we’ll get back to you via WhatsApp.

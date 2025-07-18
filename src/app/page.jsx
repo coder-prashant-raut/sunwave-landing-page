@@ -63,15 +63,21 @@ export default function Home() {
       {/* Hero Section */}
       <main>
         <HeroSection />
+
         <AboutUs />
+
+        <CallToAction />
+
         <CityScroller />
+
         <ServicesSection />
 
         <WorkProcessSection />
 
         <ProjectShowcaseSection />
-        <CallToAction />
+
         <TestimonialMasterpiece />
+        
         <ContactPage />
       </main>
     </>
