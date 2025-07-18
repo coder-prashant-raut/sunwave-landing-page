@@ -12,7 +12,7 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative w-full h-screen bg-fixed bg-center bg-cover bg-no-repeat pt-0"
+      className="relative w-full h-screen bg-fixed bg-center bg-cover bg-no-repeat pt-35"
       style={{
         backgroundImage:
           "url('https://plus.unsplash.com/premium_photo-1682148196781-8bbcdfd7f537?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0')",
@@ -22,7 +22,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black/60 z-10"></div>
 
       {/* Content */}
-      <div className="relative z-20 flex flex-col justify-center h-full px-6 sm:px-12 md:px-20 max-w-7xl mx-auto text-white">
+      <div className="relative z-20 flex flex-col justify-center h-full px-6 sm:px-12 md:px-20 max-w-7xl mx-auto text-white gap-6">
         {/* Welcome Line */}
         <div className="flex items-center gap-2 text-green-400 text-sm sm:text-base font-semibold mb-2">
           <span>☀️</span>
