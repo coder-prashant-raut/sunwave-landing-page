@@ -18,12 +18,12 @@ const image2 =
 
 export default function AboutSection() {
   return (
-    <section className="py-24 px-6 md:px-12 bg-white font-[Rubik]">
+    <section className="py-24 px-6 md:px-12  bg-white font-[Rubik]">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         {/* Left Images */}
         <div className="relative w-full">
           {/* Dots background */}
-          <div className="absolute top-6 left-6 w-40 h-40 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:16px_16px] z-0" />
+          <div className="absolute top-6 left-6 w-40 h-40 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:16px_16px] z-0 " />
 
           {/* Main image */}
           <img

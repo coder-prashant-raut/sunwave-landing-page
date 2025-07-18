@@ -12,7 +12,7 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative w-full h-screen bg-fixed bg-center bg-cover bg-no-repeat pt-[100px]"
+      className="relative w-full h-screen bg-fixed bg-center bg-cover bg-no-repeat pt-0"
       style={{
         backgroundImage:
           "url('https://plus.unsplash.com/premium_photo-1682148196781-8bbcdfd7f537?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0')",

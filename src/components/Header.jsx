@@ -10,32 +10,38 @@ import {
 } from 'react-icons/fa6';
 import { MdEmail, MdPhone } from 'react-icons/md';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
+
 
 export default function Header() {
   const [navOpen, setNavOpen] = useState(false);
+
+   const pathname = usePathname();
+  const isHome = pathname === '/';
 
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Projects', href: '/projects' },
-    { name: 'Blog', href: '/blog' },
+    { name: 'Voices of Trust', href: '/testimonials' },
   ];
 
   return (
     <header className="w-full z-50 absolute top-0 left-0">
       {/* Top Info Bar */}
       <div className="bg-transparent text-white text-sm px-4 md:px-36 py-4 flex flex-col md:flex-row justify-between items-center gap-2">
-        <div className="flex flex-row flex-wrap gap-3 text-center sm:text-left">
-          <div className="flex items-center gap-2">
-            <MdEmail className="text-xl text-[#89EA5F]" />
-            <span>info@domain.com</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <MdPhone className="text-xl text-[#89EA5F]" />
-            <span>+01 248 248 2481</span>
-          </div>
-        </div>
+         <div className="flex flex-row flex-wrap gap-3 text-center sm:text-left">
+      <div className="flex items-center gap-2">
+        <MdEmail className="text-xl text-[#89EA5F]" />
+        <span className={isHome ? 'text-white' : 'text-black'}>info@domain.com</span>
+      </div>
+      <div className="flex items-center gap-2">
+        <MdPhone className="text-xl text-[#89EA5F]" />
+        <span className={isHome ? 'text-white' : 'text-black'}>+01 248 248 2481</span>
+      </div>
+    </div>
 
         <div className="flex gap-3 justify-center mt-2 sm:mt-0">
           {[FaFacebookF, FaXTwitter, FaLinkedinIn, FaInstagram].map(
@@ -56,7 +62,7 @@ export default function Header() {
       <div className="relative">
         <div className="bg-white text-black shadow-md rounded-3xl px-6 py-4 max-w-7xl mx-auto w-[95%] flex justify-between items-center">
           <Link href="/" className="text-4xl font-bold text-[#89EA5F]">
-            Solar
+            SunWave
           </Link>
 
           {/* Desktop Navigation */}

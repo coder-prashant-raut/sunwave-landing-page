@@ -10,6 +10,7 @@ import AboutUs from "../components/AboutUs.jsx";
 import WorkProcessSection from "../components/WorkProcessSection.jsx";
 import CallToAction from "../components/CallToAction.jsx";
 import CityScroller from "../components/CityScroller.jsx";
+
 export default function Home() {
   return (
     <>
@@ -60,24 +61,20 @@ export default function Home() {
         }}
       />
 
-      {/* Hero Section */}
+      {/* Page Content */}
       <main>
-        <HeroSection />
+        {/* Hero with negative margin to cancel pt-[160px] from layout */}
+        <div className="-mt-[160px] md:-mt-[128px]">
+          <HeroSection />
+        </div>
 
         <AboutUs />
-
         <CallToAction />
-
         <CityScroller />
-
         <ServicesSection />
-
         <WorkProcessSection />
-
         <ProjectShowcaseSection />
-
         <TestimonialMasterpiece />
-        
         <ContactPage />
       </main>
     </>

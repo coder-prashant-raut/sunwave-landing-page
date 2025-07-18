@@ -62,7 +62,7 @@ export default function ProjectShowcaseSection() {
   }, []);
 
   return (
-    <section className="bg-white  py-20 px-4 md:px-10 pt-[180px]">
+    <section className="bg-white  pb-10 px-4 md:px-10 ">
       <div className="max-w-7xl mx-auto text-center">
         <div class="w-full px-4 py-12 sm:py-16 bg-white text-center font-[Rubik]">
   <div class="max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
