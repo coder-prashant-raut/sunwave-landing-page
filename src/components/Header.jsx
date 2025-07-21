@@ -11,7 +11,6 @@ import {
 import { MdEmail, MdPhone } from 'react-icons/md';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import SunwaveLogo from '../../public/sunwave-logo.png'
 
 export default function Header() {
   const [navOpen, setNavOpen] = useState(false);
@@ -84,12 +83,14 @@ export default function Header() {
       <div className="relative">
         <div className="bg-white text-black shadow-md rounded-3xl px-6 py-4 max-w-7xl mx-auto w-[95%] flex justify-between items-center">
            <Link href="/" className="block w-[125px] md:w-[155px]">
-        <Image
-          src={SunwaveLogo}
-          alt="SunWave Logo"
-          className="w-full h-auto object-contain"
-          priority
-        />
+       <Image
+  src="https://marathibatmya.in/wp-content/uploads/2025/07/sunwave-logo.png"
+  alt="SunWave Logo"
+  className="w-full h-auto object-contain"
+  width={155}
+  height={50}
+  priority
+/>
       </Link>
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8 text-[15px] font-medium">

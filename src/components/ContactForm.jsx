@@ -47,7 +47,7 @@ export default function ContactPage() {
     setIsSending(true);
     toast.loading("Sending message via WhatsApp...", toastStyles);
 
-    const msg = `New Inquiry from Clean Solar Website:\n\n👤 Name: ${name}\n📧 Email: ${email}\n📞 Phone: ${phone}\n⏰ Preferred Time: ${timeSlot}\n💬 Message: ${message}`;
+    const msg = `New Inquiry from Sunwave Website:\n\n👤 Name: ${name}\n📧 Email: ${email}\n📞 Phone: ${phone}\n⏰ Preferred Time: ${timeSlot}\n💬 Message: ${message}`;
 
     setTimeout(() => {
       window.open(`https://wa.me/918007333383?text=${encodeURIComponent(msg)}`, "_blank");
@@ -68,32 +68,27 @@ export default function ContactPage() {
     __html: JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Clean Solar Agency",
-      "url": "https://www.cleansolar.in",
-      "logo": "https://www.cleansolar.in/logo.png",
+      "name": "Sunwave Solar Agency",
+      "url": "https://www.sunwavesolar.in",
       "contactPoint": [
         {
           "@type": "ContactPoint",
-          "telephone": "+91-9876543210",
+          "telephone": "+91-8007333383",
           "contactType": "Customer Service",
           "areaServed": "IN",
           "availableLanguage": ["Hindi", "English"],
-          "email": "support@cleansolar.in"
+          "email": "support@sunwavesolarenergy.in"
         }
       ],
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "123 Solar Street",
+        "streetAddress": "Sneha Residency 52/4/2 Old Mundhwa rod Galande Nagar Near Mother Teressa School Vadgaon sheri ",
         "addressLocality": "Pune",
         "addressRegion": "MH",
-        "postalCode": "411001",
+        "postalCode": "411014",
         "addressCountry": "IN"
       },
-      "sameAs": [
-        "https://www.facebook.com/cleansolaragency",
-        "https://www.instagram.com/cleansolaragency",
-        "https://www.linkedin.com/company/cleansolaragency"
-      ]
+      
     })
   }}
 />

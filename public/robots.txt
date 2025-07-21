@@ -1,4 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
-Sitemap: https://www.sunwavesolar.in/sitemap.xml
+# Host
+Host: https://sunwavesolar.in
+
+# Sitemaps
+Sitemap: https://sunwavesolar.in/sitemap.xml

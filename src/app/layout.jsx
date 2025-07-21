@@ -70,7 +70,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         {/* Canonical URL */}
-        <link rel="canonical" href="https://www.cleansolar.in" />
+        <link rel="canonical" href="https://www.sunwavesolar.in" />
+         <link rel="icon" type="image/png" href="https://img.icons8.com/emoji/48/sun-emoji.png" />
 
         {/* Font Optimization */}
         <link
@@ -78,8 +79,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
 
-        {/* Favicon */}
-        <link rel="icon" href="/favicon.ico" />
+       
 
         {/* Structured Data */}
         <script
@@ -88,7 +88,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={`${inter.className} bg-white text-black dark:bg-black dark:text-white transition-colors duration-300`}>
-        <Header />
+        <Header/>
         <main className="pt-[160px] md:pt-[128px]">{children}</main>
         <Footer />
       </body>

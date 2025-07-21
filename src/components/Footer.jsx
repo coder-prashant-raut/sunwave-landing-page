@@ -10,7 +10,6 @@ import {
 import DeveloperCredit from "./DeveloperCredit";
 import Image from "next/image";
 import Link from "next/link";
-import SunwaveLogo from '../../public/sunwave-logo.png'
 
 export default function Footer() {
   return (
@@ -59,11 +58,13 @@ Vadgaon sheri ,Pune 411014
           <div className="flex items-center gap-2 text-lime-400 text-2xl font-bold mb-4">
              <Link href="/" className="block w-[125px] md:w-[155px]">
         <Image
-          src={SunwaveLogo}
-          alt="SunWave Logo"
-          className="w-full h-auto object-contain"
-          priority
-        />
+  src="https://marathibatmya.in/wp-content/uploads/2025/07/sunwave-logo.png"
+  alt="SunWave Logo"
+  className="w-full h-auto object-contain"
+  width={155}
+  height={50}
+  priority
+/>
       </Link>
           </div>
           <p className="text-white/80 mb-4">
