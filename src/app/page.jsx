@@ -1,6 +1,8 @@
 "use client";
 
 import Script from "next/script";
+import Head from "next/head";
+
 import HeroSection from "../components/HeroSection.jsx";
 import ContactPage from "../components/ContactForm.jsx";
 import ServicesSection from "../components/ServicesSection.jsx";
@@ -14,9 +16,49 @@ import CityScroller from "../components/CityScroller.jsx";
 export default function Home() {
   return (
     <>
-      {/* SEO Structured Data */}
+      {/* Head Tags for SEO */}
+      <Head>
+        <title>Clean Solar Agency | India’s Trusted Solar Panel Experts</title>
+        <meta
+          name="description"
+          content="Clean Solar Agency provides premium solar panel installation, consultation, and maintenance services across India. Make the switch to clean energy today!"
+        />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://www.cleansolar.in/" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Clean Solar Agency" />
+        <meta
+          property="og:description"
+          content="India’s Trusted Solar Panel Experts for Homeowners and Businesses"
+        />
+        <meta property="og:url" content="https://www.cleansolar.in/" />
+        <meta
+          property="og:image"
+          content="https://www.cleansolar.in/og-image.jpg"
+        />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Clean Solar Agency" />
+        <meta
+          name="twitter:description"
+          content="India’s Trusted Solar Panel Experts for Homeowners and Businesses"
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.cleansolar.in/og-image.jpg"
+        />
+
+        {/* Favicon */}
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      {/* Structured Data Scripts */}
       <Script
-        id="structured-data-local-business"
+        id="structured-data-business"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
@@ -24,8 +66,8 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Clean Solar Agency",
-            image: "https://your-domain.com/logo.jpg",
-            url: "https://your-domain.com",
+            image: "https://www.cleansolar.in/logo.jpg",
+            url: "https://www.cleansolar.in",
             telephone: "+91-9876543210",
             address: {
               "@type": "PostalAddress",
@@ -42,7 +84,7 @@ export default function Home() {
       />
 
       <Script
-        id="structured-data-website"
+        id="structured-data-organization"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
@@ -50,13 +92,29 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "Organization",
             name: "Clean Solar Agency",
-            url: "https://your-domain.com",
-            logo: "https://your-domain.com/logo.jpg",
+            url: "https://www.cleansolar.in",
+            logo: "https://www.cleansolar.in/logo.jpg",
             contactPoint: {
               "@type": "ContactPoint",
               telephone: "+91-9876543210",
               contactType: "Customer Service",
             },
+          }),
+        }}
+      />
+
+      <Script
+        id="structured-data-webpage"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "Home - Clean Solar Agency",
+            url: "https://www.cleansolar.in/",
+            description:
+              "Clean Solar Agency is India’s trusted expert in solar panel solutions for homes and businesses. Discover clean energy options with our premium services.",
           }),
         }}
       />

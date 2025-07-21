@@ -2,38 +2,46 @@
 import ServicesSection from "../../components/ServicesSection.jsx";
 
 export const metadata = {
-  title: "Our Solar Services | Clean Solar Agency",
-  description: "Explore Clean Solar Agency's premium solar panel installation, maintenance, and consultation services across India.",
+  title: "Our Solar Services | Sunwave Solar - Installation, Maintenance & Consultation",
+  description:
+    "Discover Sunwave Solar’s complete range of solar services including rooftop panel installation, maintenance, and expert consultation. Trusted across Pune and India for clean energy solutions.",
   openGraph: {
-    title: "Our Solar Services",
-    description: "Explore Clean Solar Agency's premium solar solutions across India.",
-    url: "https://www.cleansolar.in/services",
+    title: "Solar Services by Sunwave Solar | Complete Solar Solutions in India",
+    description:
+      "From residential rooftop systems to industrial solar installations, Sunwave Solar offers end-to-end solar services across India.",
+    url: "https://www.sunwavesolar.in/services",
     type: "website",
   },
 };
 
+
 export default function ServicesPage() {
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "Solar Panel Installation",
-    "provider": {
-      "@type": "Organization",
-      "name": "Clean Solar Agency",
-      "url": "https://www.cleansolar.in",
-      "logo": "https://www.cleansolar.in/logo.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-9876543210",
-        "contactType": "Customer Service"
-      }
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "India"
-    },
-    "description": "Clean Solar Agency offers solar panel installation, maintenance, and solar consultation services to homeowners and businesses in India."
-  };
+ const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Solar Panel Installation & Maintenance",
+  provider: {
+    "@type": "Organization",
+    name: "Sunwave Solar",
+    url: "https://www.sunwavesolar.in",
+    logo: "https://www.sunwavesolar.in/logo.png", // ← replace if you have actual logo URL
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+91-8007333383",
+      email: "support@sunwavesolarenergy.in",
+      contactType: "Customer Service",
+      areaServed: "IN",
+      availableLanguage: ["English", "Hindi", "Marathi"]
+    }
+  },
+  areaServed: {
+    "@type": "Country",
+    name: "India"
+  },
+  description:
+    "Sunwave Solar provides expert solar panel installation, maintenance, and energy consultation services for homes, businesses, and industries across India. We specialize in cost-effective, high-quality solar solutions tailored to your energy needs.",
+};
+
 
   return (
     <>

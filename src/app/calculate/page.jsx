@@ -1,20 +1,20 @@
 // ✅ app/calculate/page.jsx
 
 export const metadata = {
-  title: "Solar Savings Calculator | Estimate Electricity Bill Reduction",
+  title: "Solar Savings Calculator | Cut Electricity Costs with Sunwave Solar",
   description:
-    "Use our advanced solar savings calculator to estimate your money saving by switching to solar power.",
+    "Use Sunwave Solar’s advanced solar calculator to estimate how much you can save on your electricity bills by switching to solar energy. 100% free, accurate, and designed for Indian households and businesses.",
   openGraph: {
-    title: "Estimate Solar Savings | Clean Solar",
+    title: "Estimate Your Solar Savings | Sunwave Solar India",
     description:
-      "Reduce your electricity bill using our free solar calculator for India.",
-    url: "https://your-domain.com/calculate",
+      "Try our free solar savings calculator to find out how much you can save on power bills by installing solar panels. Get accurate savings tailored to your usage and location.",
+    url: "https://www.sunwavesolar.in/calculate",
     images: [
       {
-        url: "https://your-domain.com/images/og-estimate.jpg",
+        url: "https://www.sunwavesolar.in/images/og-estimate.jpg",
         width: 1200,
         height: 630,
-        alt: "Solar Savings Estimation",
+        alt: "Solar Savings Estimation by Sunwave Solar",
       },
     ],
   },
@@ -23,6 +23,7 @@ export const metadata = {
     follow: true,
   },
 };
+
 
 // ✅ just import directly
 import CalculateClient from "./CalculateClient";

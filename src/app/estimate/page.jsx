@@ -1,20 +1,20 @@
 // ✅ app/estimate/page.jsx
 
 export const metadata = {
-  title: "Get Free Solar Estimate | Clean Solar Agency",
+  title: "Get Free Solar Estimate | Sunwave Solar - Pune & India-wide Service",
   description:
-    "Request a free solar installation estimate tailored to your location and electricity usage.",
+    "Request a free, customized solar estimate from Sunwave Solar based on your electricity usage, rooftop area, and location. Fast quotes, expert guidance, and affordable solar panel solutions for homes and businesses.",
   openGraph: {
-    title: "Get Your Free Solar Estimate",
+    title: "Free Solar Estimate | Sunwave Solar - India’s Trusted Solar Experts",
     description:
-      "Let Clean Solar provide you with a customized quote for your solar project.",
-    url: "https://your-domain.com/estimate",
+      "Get your personalized solar installation quote with Sunwave Solar. Save on electricity bills and join the green energy revolution with Pune’s top solar company.",
+    url: "https://www.sunwavesolar.in/estimate",
     images: [
       {
-        url: "https://your-domain.com/images/og-estimate.jpg",
+        url: "https://www.sunwavesolar.in/images/og-estimate.jpg", // ← Replace with real image when ready
         width: 1200,
         height: 630,
-        alt: "Free Solar Estimate",
+        alt: "Free Solar Estimate from Sunwave Solar",
       },
     ],
   },
@@ -23,6 +23,7 @@ export const metadata = {
     follow: true,
   },
 };
+
 
 // "use client";
 

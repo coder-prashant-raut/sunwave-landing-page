@@ -15,14 +15,14 @@ const projects = [
   {
     type: "Industrial",
     client: "Galaxy Coatings",
-    city: "Vadodara, Gujarat",
+    city: "SambhajiNagar, Maharashtra",
     image:
       "https://plus.unsplash.com/premium_photo-1664299624896-53ef61aedd35?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     type: "Domestic",
     client: "Rajesh Sharma",
-    city: "Indore, MP",
+    city: "Pune, Maharashtra",
     image:
       "https://plus.unsplash.com/premium_photo-1682145578037-0369879262a2?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
@@ -36,7 +36,7 @@ const projects = [
   {
     type: "Industrial",
     client: "Shakti Engineering",
-    city: "Ahmedabad, Gujarat",
+    city: "Beed, Maharashtra",
     image:
       "https://plus.unsplash.com/premium_photo-1664476714908-148eea2dd781?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },

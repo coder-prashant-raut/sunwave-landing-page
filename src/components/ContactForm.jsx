@@ -61,33 +61,43 @@ export default function ContactPage() {
   return (
     <>
       <Script
-        id="structured-data-contact"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: "Clean Solar Agency",
-            url: "https://your-domain.com",
-            contactPoint: {
-              "@type": "ContactPoint",
-              telephone: "+91-9876543210",
-              contactType: "Customer Service",
-              areaServed: "IN",
-              availableLanguage: "Hindi, English"
-            },
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: "123 Solar Street",
-              addressLocality: "Pune",
-              addressRegion: "MH",
-              postalCode: "411001",
-              addressCountry: "IN"
-            }
-          })
-        }}
-      />
+  id="structured-data-contact"
+  type="application/ld+json"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Clean Solar Agency",
+      "url": "https://www.cleansolar.in",
+      "logo": "https://www.cleansolar.in/logo.png",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91-9876543210",
+          "contactType": "Customer Service",
+          "areaServed": "IN",
+          "availableLanguage": ["Hindi", "English"],
+          "email": "support@cleansolar.in"
+        }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Solar Street",
+        "addressLocality": "Pune",
+        "addressRegion": "MH",
+        "postalCode": "411001",
+        "addressCountry": "IN"
+      },
+      "sameAs": [
+        "https://www.facebook.com/cleansolaragency",
+        "https://www.instagram.com/cleansolaragency",
+        "https://www.linkedin.com/company/cleansolaragency"
+      ]
+    })
+  }}
+/>
+
 
       <Toaster position="top-center" toastOptions={{ duration: 3500 }} containerStyle={{ top: 70 }} />
 

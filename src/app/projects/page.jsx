@@ -1,30 +1,30 @@
 import ProjectShowcaseSection from "../../components/ProjectShowcaseSection.jsx";
 
 export const metadata = {
-  title: "Solar Project Portfolio | Clean Solar Agency",
+  title: "Solar Project Portfolio | Sunwave Solar - Residential & Industrial Installs",
   description:
-    "Discover our successful solar panel installations across homes and industries in India. See how Clean Solar is powering the future.",
+    "Explore Sunwave Solar’s portfolio of successful residential, commercial, and industrial solar installations across Pune and India. See how we’re delivering clean energy and savings nationwide.",
   openGraph: {
-    title: "Solar Projects by Clean Solar Agency",
+    title: "Sunwave Solar Projects | Powering a Greener India",
     description:
-      "View our latest residential and industrial solar installations across India.",
-    url: "https://www.cleansolar.in/projects",
-    siteName: "Clean Solar Agency",
+      "Browse our latest solar panel installations for homes, businesses, and factories. Sunwave Solar is trusted for clean energy solutions across India.",
+    url: "https://www.sunwavesolar.in/projects",
+    siteName: "Sunwave Solar",
     type: "website",
     images: [
       {
-        url: "https://plus.unsplash.com/premium_photo-1680302170840-ad9b1256f40e?q=80",
+        url: "https://plus.unsplash.com/premium_photo-1680302170840-ad9b1256f40e?q=80", // You can replace this with your real project image later
         width: 1200,
         height: 630,
-        alt: "Industrial Solar Installation",
+        alt: "Sunwave Solar Project Installation",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Clean Solar Projects",
+    title: "Sunwave Solar Projects | See Our Latest Work",
     description:
-      "Explore our latest solar projects — building a greener India, one roof at a time.",
+      "Discover how Sunwave Solar is transforming rooftops into power stations — one project at a time across India.",
     images: [
       "https://plus.unsplash.com/premium_photo-1680302170840-ad9b1256f40e?q=80",
     ],
@@ -32,38 +32,41 @@ export const metadata = {
 };
 
 
+
 export default function ProjectsPage() {
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Solar Projects Portfolio",
-    "description":
-      "Explore our latest solar panel installations for residential and industrial clients across India.",
-    "url": "https://www.cleansolar.in/projects",
-    "mainEntity": [
-      {
-        "@type": "Service",
-        "serviceType": "Industrial Solar Installation",
-        "areaServed": "India",
-        "provider": {
-          "@type": "Organization",
-          "name": "Clean Solar Agency",
-          "url": "https://www.cleansolar.in",
-        },
-        "serviceOutput": "50KW Rooftop System for Dukat Industries, Pune",
+ const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Solar Project Portfolio | Sunwave Solar",
+  description:
+    "Browse Sunwave Solar’s portfolio of high-performance solar panel installations across India, including homes, industries, and commercial rooftops.",
+  url: "https://www.sunwavesolar.in/projects",
+  mainEntity: [
+    {
+      "@type": "Service",
+      serviceType: "Industrial Solar Installation",
+      areaServed: "India",
+      provider: {
+        "@type": "Organization",
+        name: "Sunwave Solar",
+        url: "https://www.sunwavesolar.in",
       },
-      {
-        "@type": "Service",
-        "serviceType": "Domestic Solar Setup",
-        "areaServed": "India",
-        "provider": {
-          "@type": "Organization",
-          "name": "Clean Solar Agency",
-        },
-        "serviceOutput": "5KW Home System for Rajesh Sharma, Indore",
+      serviceOutput: "50KW Rooftop Solar System installed at Dukat Industries, Pune",
+    },
+    {
+      "@type": "Service",
+      serviceType: "Residential Solar Panel Setup",
+      areaServed: "India",
+      provider: {
+        "@type": "Organization",
+        name: "Sunwave Solar",
+        url: "https://www.sunwavesolar.in",
       },
-    ],
-  };
+      serviceOutput: "5KW Home Solar System for Mr. Rajesh Sharma, Indore",
+    },
+  ],
+};
+
 
   return (
     <>

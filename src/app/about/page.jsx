@@ -2,18 +2,19 @@
 import AboutUs from '../../components/AboutUs.jsx';
 
 export const metadata = {
-  title: 'About Us | Sunwave Solar',
+  title: 'About Us | Sunwave Solar - Trusted Solar Company in Pune',
   description:
-    'Learn more about Sunwave Solar — our mission, vision, and the clean energy solutions we provide across India.',
+    'Sunwave Solar is a Pune-based solar energy company offering affordable, high-quality solar panel solutions for homes, businesses, and industries across India. We help you switch to clean energy and save big on electricity bills.',
   openGraph: {
-    title: 'About Us | Sunwave Solar',
+    title: 'About Us | Sunwave Solar - Leading Solar Panel Company in Pune',
     description:
-      'We are a leading solar energy company in India helping homes and businesses go green with affordable solar power.',
-    url: 'https://www.sunwavesolar.com/about',
+      'Join thousands of happy customers switching to solar energy with Sunwave Solar — trusted provider of solar panel installation and maintenance services in Pune and all over India.',
+    url: 'https://www.sunwavesolar.in/about',
     type: 'website',
     locale: 'en_IN',
   },
 };
+
 
 export default function AboutPage() {
   return (

@@ -3,26 +3,22 @@
 import ContactPage from "../../components/ContactForm";
 
 export const metadata = {
-  title: "Contact Us | Clean Solar Agency",
-  description: "Get in touch with Clean Solar for solar panel installation inquiries and consultations in India.",
+  title: "Contact Us | Sunwave Solar - Pune's Trusted Solar Experts",
+  description:
+    "Get in touch with Sunwave Solar for expert solar panel consultations, installations, and support in Pune and across India. Let's power your future with clean, affordable energy.",
   openGraph: {
-    title: "Contact Clean Solar Agency",
-    description: "Reach out to India’s top solar provider for custom solar estimates and project support.",
-    url: "https://your-domain.com/contact",
-    images: [
-      {
-        url: "https://your-domain.com/images/og-contact.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Contact Clean Solar",
-      },
-    ],
+    title: "Contact Sunwave Solar - Reach India’s Top Solar Experts",
+    description:
+      "Have questions about solar power or want a custom quote? Contact Sunwave Solar for reliable service, affordable solutions, and expert guidance in Pune and beyond.",
+    url: "https://www.sunwavesolar.in/contact",
+    
   },
   robots: {
     index: true,
     follow: true,
   },
 };
+
 
 export default function Contact() {
 
