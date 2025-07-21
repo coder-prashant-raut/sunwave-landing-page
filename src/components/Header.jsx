@@ -1,23 +1,21 @@
 'use client';
 
 import { useState } from 'react';
+import Image from "next/image";
 import { FiMenu, FiX } from 'react-icons/fi';
 import {
   FaFacebookF,
-  FaXTwitter,
-  FaLinkedinIn,
   FaInstagram,
-} from 'react-icons/fa6';
+  FaMapMarkerAlt,
+} from 'react-icons/fa';
 import { MdEmail, MdPhone } from 'react-icons/md';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-
-
+import SunwaveLogo from '../../public/sunwave-logo.png'
 
 export default function Header() {
   const [navOpen, setNavOpen] = useState(false);
-
-   const pathname = usePathname();
+  const pathname = usePathname();
   const isHome = pathname === '/';
 
   const navLinks = [
@@ -32,39 +30,67 @@ export default function Header() {
     <header className="w-full z-50 absolute top-0 left-0">
       {/* Top Info Bar */}
       <div className="bg-transparent text-white text-sm px-4 md:px-36 py-4 flex flex-col md:flex-row justify-between items-center gap-2">
-         <div className="flex flex-row flex-wrap gap-3 text-center sm:text-left">
-      <div className="flex items-center gap-2">
-        <MdEmail className="text-xl text-[#89EA5F]" />
-        <span className={isHome ? 'text-white' : 'text-black'}>prashantraut1308@gmail.com</span>
-      </div>
-      <div className="flex items-center gap-2">
-        <MdPhone className="text-xl text-[#89EA5F]" />
-        <span className={isHome ? 'text-white' : 'text-black'}>+91 9067751221</span>
-      </div>
-    </div>
+        <div className="flex flex-row flex-wrap gap-3 text-center sm:text-left">
+          <div className="flex items-center gap-2">
+            <MdEmail className="text-xl text-[#89EA5F]" />
+            <a
+              href="mailto:support@sunwavesolarenergy.in"
+              className={isHome ? 'text-white' : 'text-black'}
+            >
+              support@sunwavesolarenergy.in
+            </a>
+          </div>
+          <div className="flex items-center gap-2">
+            <MdPhone className="text-xl text-[#89EA5F]" />
+            <a
+              href="tel:+918007333383"
+              className={isHome ? 'text-white' : 'text-black'}
+            >
+              +91 80073 33383
+            </a>
+          </div>
+        </div>
 
+        {/* Social Links */}
         <div className="flex gap-3 justify-center mt-2 sm:mt-0">
-          {[FaFacebookF, FaXTwitter, FaLinkedinIn, FaInstagram].map(
-            (Icon, idx) => (
-              <a
-                key={idx}
-                href="#"
-                className="bg-[#89EA5F] hover:bg-green-400 text-black p-2 rounded-md transition"
-              >
-                <Icon />
-              </a>
-            )
-          )}
+          <a
+            href="https://www.facebook.com/share/1FCT9Uu7P8/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#89EA5F] hover:bg-green-400 text-black p-2 rounded-md transition"
+          >
+            <FaFacebookF />
+          </a>
+          <a
+            href="https://www.instagram.com/sunwave_solar_energy?igsh=eHRqZ2UyMHh5ZDBp"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#89EA5F] hover:bg-green-400 text-black p-2 rounded-md transition"
+          >
+            <FaInstagram />
+          </a>
+          <a
+            href="https://maps.app.goo.gl/tzwyQWmTohgKmXTv5"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#89EA5F] hover:bg-green-400 text-black p-2 rounded-md transition"
+          >
+            <FaMapMarkerAlt />
+          </a>
         </div>
       </div>
 
       {/* Main Nav */}
       <div className="relative">
         <div className="bg-white text-black shadow-md rounded-3xl px-6 py-4 max-w-7xl mx-auto w-[95%] flex justify-between items-center">
-          <Link href="/" className="text-4xl font-bold text-[#89EA5F]">
-            SunWave
-          </Link>
-
+           <Link href="/" className="block w-[125px] md:w-[155px]">
+        <Image
+          src={SunwaveLogo}
+          alt="SunWave Logo"
+          className="w-full h-auto object-contain"
+          priority
+        />
+      </Link>
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8 text-[15px] font-medium">
             {navLinks.map((link) => (
@@ -115,7 +141,7 @@ export default function Header() {
               className="text-3xl font-bold text-[#89EA5F]"
               onClick={() => setNavOpen(false)}
             >
-              Solar
+              SunWave
             </Link>
             <button onClick={() => setNavOpen(false)} aria-label="Close Menu">
               <FiX size={28} className="text-[#89EA5F]" />
@@ -145,17 +171,30 @@ export default function Header() {
 
           {/* Social Icons */}
           <div className="flex gap-3 justify-center mt-10">
-            {[FaFacebookF, FaXTwitter, FaLinkedinIn, FaInstagram].map(
-              (Icon, idx) => (
-                <a
-                  key={idx}
-                  href="#"
-                  className="bg-[#89EA5F] hover:bg-green-400 text-black p-2 rounded-md transition"
-                >
-                  <Icon />
-                </a>
-              )
-            )}
+            <a
+              href="https://www.facebook.com/share/1FCT9Uu7P8/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#89EA5F] hover:bg-green-400 text-black p-2 rounded-md transition"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href="https://www.instagram.com/sunwave_solar_energy?igsh=eHRqZ2UyMHh5ZDBp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#89EA5F] hover:bg-green-400 text-black p-2 rounded-md transition"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://maps.app.goo.gl/tzwyQWmTohgKmXTv5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#89EA5F] hover:bg-green-400 text-black p-2 rounded-md transition"
+            >
+              <FaMapMarkerAlt />
+            </a>
           </div>
         </div>
       </div>

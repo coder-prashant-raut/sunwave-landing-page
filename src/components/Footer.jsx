@@ -3,16 +3,18 @@ import {
   PhoneCall,
   MapPin,
   Facebook,
-  Twitter,
   Instagram,
   Linkedin,
   ArrowRight,
 } from "lucide-react";
+import DeveloperCredit from "./DeveloperCredit";
+import Image from "next/image";
+import Link from "next/link";
+import SunwaveLogo from '../../public/sunwave-logo.png'
 
 export default function Footer() {
   return (
     <footer className="bg-[#082f09] px-5 pb-12 text-white pt-10 font-[Rubik]">
-      
       {/* Top Contact Info */}
       <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between gap-6 pb-10 border-b border-green-800">
         {/* Email */}
@@ -20,7 +22,7 @@ export default function Footer() {
           <Mail size={36} className="text-lime-400" />
           <div>
             <p className="font-semibold text-white">Support & Email</p>
-            <p className="text-sm text-white/80">info@domainname.com</p>
+            <p className="text-sm text-white/80">support@sunwavesolarenergy.in</p>
           </div>
         </div>
         {/* Phone */}
@@ -28,7 +30,7 @@ export default function Footer() {
           <PhoneCall size={36} className="text-lime-400" />
           <div>
             <p className="font-semibold text-white">Customer Support</p>
-            <p className="text-sm text-white/80">+01 547 547 5478</p>
+            <p className="text-sm text-white/80">+91 80073 33383</p>
           </div>
         </div>
         {/* Location */}
@@ -36,9 +38,16 @@ export default function Footer() {
           <MapPin size={36} className="text-lime-400" />
           <div>
             <p className="font-semibold text-white">Our Location</p>
-            <p className="text-sm text-white/80">
-              Street no, City, Country 123456
-            </p>
+            <a
+              href="https://maps.app.goo.gl/tzwyQWmTohgKmXTv5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-white/80 hover:text-lime-400"
+            >
+              Sneha Residency ,52/4/2 ,Old Mundhwa rod , <br /> Galande Nagar, Near Mother Teressa
+School, <br />
+Vadgaon sheri ,Pune 411014
+            </a>
           </div>
         </div>
       </div>
@@ -48,17 +57,43 @@ export default function Footer() {
         {/* Logo & About */}
         <div>
           <div className="flex items-center gap-2 text-lime-400 text-2xl font-bold mb-4">
-            ⚡ <span>Solor</span>
+             <Link href="/" className="block w-[125px] md:w-[155px]">
+        <Image
+          src={SunwaveLogo}
+          alt="SunWave Logo"
+          className="w-full h-auto object-contain"
+          priority
+        />
+      </Link>
           </div>
           <p className="text-white/80 mb-4">
-            Green Energy is a long established fact that a reader will be
-            distracted by the readable content of a page when.
+            We bring sustainable solar solutions to homes and businesses for a greener tomorrow.
           </p>
           <div className="flex gap-4">
-            <a href="#" className="hover:text-lime-400"><Facebook size={20} /></a>
-            <a href="#" className="hover:text-lime-400"><Twitter size={20} /></a>
-            <a href="#" className="hover:text-lime-400"><Linkedin size={20} /></a>
-            <a href="#" className="hover:text-lime-400"><Instagram size={20} /></a>
+            <a
+              href="https://www.facebook.com/share/1FCT9Uu7P8/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-lime-400"
+            >
+              <Facebook size={20} />
+            </a>
+            <a
+              href="https://www.instagram.com/sunwave_solar_energy?igsh=eHRqZ2UyMHh5ZDBp"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-lime-400"
+            >
+              <Instagram size={20} />
+            </a>
+            <a
+              href="https://maps.app.goo.gl/tzwyQWmTohgKmXTv5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-lime-400"
+            >
+              <MapPin size={20} />
+            </a>
           </div>
         </div>
 
@@ -66,23 +101,38 @@ export default function Footer() {
         <div>
           <h4 className="text-white font-semibold mb-4">Quick Links</h4>
           <ul className="space-y-2 text-white/80">
-            <li><a href="#" className="flex items-center gap-2 hover:text-lime-400"><ArrowRight size={16} /> Home</a></li>
-            <li><a href="#" className="flex items-center gap-2 hover:text-lime-400"><ArrowRight size={16} /> About Us</a></li>
-            <li><a href="#" className="flex items-center gap-2 hover:text-lime-400"><ArrowRight size={16} /> Services</a></li>
-            <li><a href="#" className="flex items-center gap-2 hover:text-lime-400"><ArrowRight size={16} /> Blog</a></li>
-            <li><a href="#" className="flex items-center gap-2 hover:text-lime-400"><ArrowRight size={16} /> Contact Us</a></li>
+            <li>
+              <a href="/" className="flex items-center gap-2 hover:text-lime-400">
+                <ArrowRight size={16} /> Home
+              </a>
+            </li>
+            <li>
+              <a href="/about" className="flex items-center gap-2 hover:text-lime-400">
+                <ArrowRight size={16} /> About Us
+              </a>
+            </li>
+            <li>
+              <a href="/services" className="flex items-center gap-2 hover:text-lime-400">
+                <ArrowRight size={16} /> Services
+              </a>
+            </li>
+            <li>
+              <a href="/contact" className="flex items-center gap-2 hover:text-lime-400">
+                <ArrowRight size={16} /> Contact Us
+              </a>
+            </li>
           </ul>
         </div>
 
-        {/* Services */}
+        {/* Services (Text Only) */}
         <div>
           <h4 className="text-white font-semibold mb-4">Services</h4>
           <ul className="space-y-2 text-white/80">
-            <li><a href="#" className="flex items-center gap-2 hover:text-lime-400"><ArrowRight size={16} /> Hybrid Energy</a></li>
-            <li><a href="#" className="flex items-center gap-2 hover:text-lime-400"><ArrowRight size={16} /> Renewable Energy</a></li>
-            <li><a href="#" className="flex items-center gap-2 hover:text-lime-400"><ArrowRight size={16} /> Solar Maintenance</a></li>
-            <li><a href="#" className="flex items-center gap-2 hover:text-lime-400"><ArrowRight size={16} /> Solar PV Systems</a></li>
-            <li><a href="#" className="flex items-center gap-2 hover:text-lime-400"><ArrowRight size={16} /> Solar Solutions</a></li>
+            <li className="flex items-center gap-2"><ArrowRight size={16} /> Hybrid Energy</li>
+            <li className="flex items-center gap-2"><ArrowRight size={16} /> Renewable Energy</li>
+            <li className="flex items-center gap-2"><ArrowRight size={16} /> Solar Maintenance</li>
+            <li className="flex items-center gap-2"><ArrowRight size={16} /> Solar PV Systems</li>
+            <li className="flex items-center gap-2"><ArrowRight size={16} /> Solar Solutions</li>
           </ul>
         </div>
 
@@ -90,19 +140,28 @@ export default function Footer() {
         <div>
           <h4 className="text-white font-semibold mb-4">Useful Links</h4>
           <ul className="space-y-2 text-white/80">
-            <li><a href="#" className="flex items-center gap-2 hover:text-lime-400"><ArrowRight size={16} /> Privacy Policy</a></li>
-            <li><a href="#" className="flex items-center gap-2 hover:text-lime-400"><ArrowRight size={16} /> Terms & Conditions</a></li>
-            <li><a href="#" className="flex items-center gap-2 hover:text-lime-400"><ArrowRight size={16} /> Warranty</a></li>
-            <li><a href="#" className="flex items-center gap-2 hover:text-lime-400"><ArrowRight size={16} /> Support</a></li>
-            <li><a href="#" className="flex items-center gap-2 hover:text-lime-400"><ArrowRight size={16} /> Damage Policy</a></li>
+            <li>
+              <a href="/privacy-policy" className="flex items-center gap-2 hover:text-lime-400">
+                <ArrowRight size={16} /> Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a href="/terms-and-conditions" className="flex items-center gap-2 hover:text-lime-400">
+                <ArrowRight size={16} /> Terms & Conditions
+              </a>
+            </li>
           </ul>
         </div>
       </div>
 
-      {/* Copyright Bar */}
-      <div className="bg-lime-400 text-[#082f09] text-center md:mx-30 md:py-8 md:text-2xl text-sm font-semibold py-4 rounded-2xl">
-        Copyright © 2024 Solor. All rights reserved.
-      </div>
+      {/* Copyright */}
+      {/* Copyright */}
+<div className="bg-lime-400 text-[#082f09] text-center text-sm font-semibold py-4 rounded-2xl">
+  © {new Date().getFullYear()} SunWave. All rights reserved.
+</div>
+
+
+<DeveloperCredit/>
     </footer>
   );
 }

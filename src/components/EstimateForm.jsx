@@ -48,7 +48,7 @@ export default function EstimateForm() {
     toast.loading("Sending request via WhatsApp...", toastStyles);
 
     const msg = `🌞 Solar Estimate Request:\n\n👤 Name: ${name}\n📞 Phone: ${phone}\n📍 Location: ${location}`;
-    const whatsappURL = `https://wa.me/919067751221?text=${encodeURIComponent(msg)}`;
+    const whatsappURL = `https://wa.me/918007333383?text=${encodeURIComponent(msg)}`;
 
     setTimeout(() => {
       window.open(whatsappURL, "_blank");

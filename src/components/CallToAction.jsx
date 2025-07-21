@@ -27,7 +27,7 @@ const CallToAction = () => {
         <div className="w-full md:w-[60%] text-center md:text-left mt-4 md:mt-0 px-4 py-3">
           <h2 className="text-2xl md:text-4xl font-[Rubik] text-gray-900 mb-4 leading-snug">
             Have Questions?{" "}
-            <span className="text-green-600 font-semibold">Call Us 800-001-658</span>
+            <span className="text-green-600 font-semibold">Call Us 80073 33383</span>
           </h2>
           <p className="text-gray-600 text-base">
             It is a long established fact that a reader will be distracted by the readable

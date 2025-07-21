@@ -5,34 +5,49 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Star, Quote } from "lucide-react";
 
 const testimonials = [
-  {
-    name: "Amit Verma",
-    role: "Factory Owner, Pune",
-    message:
-      "Clean Solar turned my factory into a power saver. In just months, my bills dropped significantly. Their team was efficient and respectful.",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
-  },
-  {
-    name: "Sonal Desai",
-    role: "Homeowner, Ahmedabad",
-    message:
-      "I was skeptical about solar panels. But now I can proudly say, it’s the best decision I made for my family. Clean Solar delivered top-notch quality!",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
-  },
-  {
-    name: "Rakesh Singh",
-    role: "Business Owner, Indore",
-    message:
-      "From consultation to installation – the process was smooth and transparent. Highly recommend Clean Solar for reliable service.",
-    image: "https://randomuser.me/api/portraits/men/65.jpg",
-  },
-  {
-    name: "Priya Kulkarni",
-    role: "Architect, Mumbai",
-    message:
-      "I recommend Clean Solar to my clients for smart, aesthetic and sustainable installations. Their solutions blend beautifully with modern architecture.",
-    image: "https://randomuser.me/api/portraits/women/65.jpg",
-  },
+ {
+  name: "Deepak Sharma",
+  role: "School Principal, Nashik",
+  message:
+    "Our school made the switch to solar with Clean Solar and we've saved immensely on electricity bills. The kids also love learning about green energy firsthand!",
+  image: "https://randomuser.me/api/portraits/men/58.jpg",
+},
+{
+  name: "Meera Joshi",
+  role: "Café Owner, Lonavala",
+  message:
+    "Solar energy helped reduce our operational costs. Clean Solar’s team was punctual, polite, and the system works flawlessly. Truly professional service.",
+  image: "https://randomuser.me/api/portraits/women/68.jpg",
+},
+{
+  name: "Anil Deshmukh",
+  role: "Warehouse Manager, Aurangabad",
+  message:
+    "We needed a dependable solar partner, and Clean Solar delivered. Our monthly power expenses are down by 40%. Fantastic investment.",
+  image: "https://randomuser.me/api/portraits/men/71.jpg",
+},
+{
+  name: "Neha Patil",
+  role: "Real Estate Developer, Kolhapur",
+  message:
+    "We integrated Clean Solar’s systems in all our premium villas. Buyers love the eco-conscious angle. Their installation is sleek and non-intrusive.",
+  image: "https://randomuser.me/api/portraits/women/52.jpg",
+},
+{
+  name: "Rahul Bansal",
+  role: "Retail Store Owner, Nagpur",
+  message:
+    "Switching to solar was a big decision. Clean Solar made it easy with transparent pricing and smooth execution. Highly recommended for small businesses.",
+  image: "https://randomuser.me/api/portraits/men/12.jpg",
+},
+{
+  name: "Swati Pandey",
+  role: "NGO Director, Satara",
+  message:
+    "We wanted to set an example in sustainability. Clean Solar guided us with patience and expertise. Our donors are impressed with the results.",
+  image: "https://randomuser.me/api/portraits/women/30.jpg",
+},
+
 ];
 
 export default function TestimonialMasterpiece() {

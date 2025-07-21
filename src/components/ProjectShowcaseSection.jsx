@@ -72,7 +72,7 @@ export default function ProjectShowcaseSection() {
     <p className="text-base sm:text-lg text-black/40 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto">
       Trusted by industries and households across India.
       <br classn="hidden sm:block" />
-      Each project showcases our commitment to <span className="text-[#89EA5F] font-semibold">quality, innovation</span>, and <span class="text-[#89EA5F] font-semibold">energy independence</span>.
+      Each project showcases our commitment to <span className="text-[#89EA5F] font-semibold">quality, innovation</span>, and <span className="text-[#89EA5F] font-semibold">energy independence</span>.
     </p>
   </div>
 </div>
