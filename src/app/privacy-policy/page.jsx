@@ -1,6 +1,6 @@
 export default function PrivacyPolicyPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-10 text-gray-800 dark:text-white">
+    <div className="max-w-4xl mx-auto px-4 py-10 text-gray-800 ">
       <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
 
       <p className="mb-4">
@@ -8,7 +8,7 @@ export default function PrivacyPolicyPage() {
       </p>
 
       <p className="mb-4">
-        At <strong>Clean Solar</strong>, we value your privacy and are committed to protecting your personal data. This Privacy Policy outlines how we collect, use, and safeguard the information you provide when you interact with our services.
+        At <strong>Sunwave Solar</strong>, we value your privacy and are committed to protecting your personal data. This Privacy Policy outlines how we collect, use, and safeguard the information you provide when you interact with our services.
       </p>
 
       <h2 className="text-xl font-semibold mt-6 mb-2">1. Information We Collect</h2>

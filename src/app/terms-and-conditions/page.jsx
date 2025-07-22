@@ -1,6 +1,6 @@
 export default function TermsAndConditionsPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-10 text-gray-800 dark:text-white">
+    <div className="max-w-4xl mx-auto px-4 py-10 text-gray-800">
       <h1 className="text-3xl font-bold mb-6">Terms & Conditions</h1>
 
       <p className="mb-4">
@@ -8,7 +8,7 @@ export default function TermsAndConditionsPage() {
       </p>
 
       <p className="mb-4">
-        Welcome to <strong>Clean Solar</strong>. By accessing or using our website (sunwavesolarenergy.in), you agree to be bound by the following terms and conditions. Please read them carefully.
+        Welcome to <strong>Sunwave Solar</strong>. By accessing or using our website (sunwavesolarenergy.in), you agree to be bound by the following terms and conditions. Please read them carefully.
       </p>
 
       <h2 className="text-xl font-semibold mt-6 mb-2">1. Use of the Website</h2>
