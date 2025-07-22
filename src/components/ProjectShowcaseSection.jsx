@@ -66,10 +66,10 @@ export default function ProjectShowcaseSection() {
       <div className="max-w-7xl mx-auto text-center">
         <div className="w-full px-4 py-12 sm:py-16 bg-white text-center font-[Rubik]">
   <div className="max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
-    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black/50 mb-4 leading-tight">
+    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black/70 mb-4 leading-tight">
       Our Successful <span className="text-[#89EA5F]">Solar Installations</span>
     </h2>
-    <p className="text-base sm:text-lg text-black/40 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto">
+    <p className="text-base sm:text-lg text-black/40 dark:text-gray-500 leading-relaxed max-w-2xl mx-auto">
       Trusted by industries and households across India.
       <br classn="hidden sm:block" />
       Each project showcases our commitment to <span className="text-[#89EA5F] font-semibold">quality, innovation</span>, and <span className="text-[#89EA5F] font-semibold">energy independence</span>.
@@ -106,7 +106,7 @@ export default function ProjectShowcaseSection() {
                   <h3 className="text-xl font-semibold text-gray-800 leading-snug">
                     {project.client}
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
+                  <p className="text-sm text-gray-500 mt-1">
                     {project.city}
                   </p>
                 </div>

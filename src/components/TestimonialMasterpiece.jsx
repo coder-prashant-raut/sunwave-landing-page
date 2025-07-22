@@ -69,7 +69,7 @@ export default function TestimonialMasterpiece() {
       <div className="absolute -bottom-32 -right-32 w-[300px] h-[300px] bg-yellow-400 opacity-10 rounded-full blur-[120px] z-0" />
 
       <div className="relative z-10 max-w-5xl mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900/55 mb-4 leading-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900/75 mb-4 leading-tight">
           What Our Clients Say
         </h2>
         <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto mb-12">
@@ -109,7 +109,7 @@ export default function TestimonialMasterpiece() {
                 ))}
             </div>
 
-            <blockquote className="text-base sm:text-lg italic text-gray-300 leading-relaxed mb-6">
+            <blockquote className="text-base sm:text-lg italic text-gray-500 leading-relaxed mb-6">
               “{current.message}”
             </blockquote>
 
