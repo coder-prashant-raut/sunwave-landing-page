@@ -5,10 +5,14 @@ import { CheckCircle } from "lucide-react";
 import Link from "next/link";
 
 const features = [
-  "Solar Inverter Setup",
-  "Solar Material Financing",
-  "Battery Storage Solutions",
-  "24 X 7 Call & Chat Support",
+  "Complete Solar Inverter Installation",
+  "Flexible Financing for Solar Equipment",
+  "High-Efficiency Battery Storage Options",
+  "24x7 Dedicated Support via Call & Chat",
+  "MNRE Approved Products & Services",
+  "Net Metering Setup Assistance",
+  "End-to-End Project Management",
+  "5-Year Warranty & Maintenance Plans",
 ];
 
 const image1 =
@@ -18,12 +22,12 @@ const image2 =
 
 export default function AboutSection() {
   return (
-    <section className="py-24 px-6 md:px-12  bg-white font-[Rubik]">
+    <section className="py-24 px-6 md:px-12 bg-white font-[Rubik]">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         {/* Left Images */}
         <div className="relative w-full">
           {/* Dots background */}
-          <div className="absolute top-6 left-6 w-40 h-40 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:16px_16px] z-0 " />
+          <div className="absolute top-6 left-6 w-40 h-40 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:16px_16px] z-0" />
 
           {/* Main image */}
           <img
@@ -51,17 +55,18 @@ export default function AboutSection() {
             ⚡ About Us
           </p>
           <h2 className="text-3xl md:text-5xl text-[#101010] mb-6 leading-tight">
-            About SunWave Solar
+            Empowering India with Clean Solar Energy
           </h2>
 
           <p className="text-gray-600 mb-4">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s.
+            <strong>SunWave Solar</strong> is a trusted name in solar energy solutions across Maharashtra.
+            With over <strong>500+ successful installations</strong> and a growing network of satisfied clients,
+            we are on a mission to make clean energy accessible and affordable to all.
           </p>
           <p className="text-gray-600 mb-6">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam.
+            We specialize in <strong>turnkey solar EPC projects</strong> for homes, businesses, and industries —
+            from consultation and design to installation, maintenance, and support. Our solutions are 
+            <span className="text-[#101010] font-medium"> MNRE-compliant</span> and aligned with government subsidy schemes.
           </p>
 
           {/* Features */}
@@ -77,13 +82,12 @@ export default function AboutSection() {
             ))}
           </div>
 
-          {/* Button */}
-          {/* Button */}
+          {/* CTA Button */}
           <Link
             href="/contact"
             className="inline-block bg-[#89EA5F] text-white px-6 py-3 rounded-full font-medium shadow hover:bg-green-500 transition"
           >
-           Contact Us
+            Contact Our Experts
           </Link>
         </motion.div>
       </div>

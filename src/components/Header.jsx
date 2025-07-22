@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Image from "next/image";
 import { FiMenu, FiX } from 'react-icons/fi';
 import {
   FaFacebookF,
@@ -83,7 +82,7 @@ export default function Header() {
       <div className="relative">
         <div className="bg-white text-black shadow-md rounded-3xl px-6 py-4 max-w-7xl mx-auto w-[95%] flex justify-between items-center">
            <Link href="/" className="block w-[125px] md:w-[155px]">
-       <Image
+       <img
   src="https://marathibatmya.in/wp-content/uploads/2025/07/sunwave-logo.png"
   alt="SunWave Logo"
   className="w-full h-auto object-contain"

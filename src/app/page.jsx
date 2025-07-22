@@ -12,6 +12,7 @@ import AboutUs from "../components/AboutUs.jsx";
 import WorkProcessSection from "../components/WorkProcessSection.jsx";
 import CallToAction from "../components/CallToAction.jsx";
 import CityScroller from "../components/CityScroller.jsx";
+import FaqSection from "../components/FaqSection.jsx";
 
 export default function Home() {
   return (
@@ -134,6 +135,7 @@ export default function Home() {
         <ProjectShowcaseSection />
         <TestimonialMasterpiece />
         <ContactPage />
+        <FaqSection/>
       </main>
     </>
   );
